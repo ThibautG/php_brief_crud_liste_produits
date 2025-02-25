@@ -28,13 +28,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { // $_SERVER est appelée variable s
 
             // Stockage du message dans la session
             $_SESSION['message'] = "Vous avez modifié $name pour un prix de $price € à une quantité de $stock";
-            $_SESSION['Retour'];
+
         }catch(PDOException $e){
             echo 'error  est survenue '.$e->getMessage();
         }
 
         header("Location: index.php");
-
+    unset($_SESSION['message']);
         exit();
     } else {
         $_SESSION['message'] = "Veuillez remplir tous les champs !";
