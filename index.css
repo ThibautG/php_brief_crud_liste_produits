@@ -1,75 +1,164 @@
+/* Style général de la page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style du titre */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Style du formulaire */
+form {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin: 0 auto 20px auto;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Style des groupes de champs */
+form div {
+    margin-bottom: 20px;
+}
+
+/* Style des libellés */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+/* Style des champs de saisie */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #2c3e50;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(44, 62, 80, 0.2);
+}
+
+/* Style du bouton */
+button {
+    /*
+    background: linear-gradient(90deg, #434343 0%, #000000 100%);
+    */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Style du message */
+p {
+    text-align: center;
+    font-size: 16px;
+    color: #2c3e50;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+
+    input, button {
+        padding: 10px;
+    }
+}
+
+/* Style supplémentaire pour le tableau (pour assurer la cohérence) */
 table {
     width: 100%;
+    max-width: 800px;
     border-collapse: collapse;
-    margin: 25px 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: white;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+    animation: fadeIn 0.6s ease-in-out;
 }
 
-thead tr {
-    background-color: #009879;
-    color: #ffffff;
+thead {
+    background: linear-gradient(90deg, #434343 0%, #000000 100%);
+    color: white;
+}
+
+th {
+    padding: 15px;
     text-align: left;
-}
-
-th, td {
-    padding: 12px 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 tbody tr {
-    border-bottom: 1px solid #dddddd;
-}
-
-tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-}
-
-tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 1px solid #eee;
 }
 
 tbody tr:hover {
-    background-color: #f1fff9;
-    cursor: pointer;
+    background-color: #f6f9fc;
 }
 
-/* Style responsive */
-@media (max-width: 400px) {
-    table {
-        border: 0;
-        box-shadow: none;
-    }
-
-    table thead {
-        display: none;
-    }
-
-    table tr {
-        margin-bottom: 15px;
-        display: block;
-        border-bottom: 2px solid #009879;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        overflow: hidden;
-    }
-
-    table td {
-        display: block;
-        text-align: right;
-        font-size: 14px;
-        border-bottom: 1px solid #dddddd;
-    }
-
-    table td:last-child {
-        border-bottom: 0;
-    }
-
-    table td::before {
-        content: attr(data-label);
-        float: left;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
+td {
+    padding: 12px 15px;
 }
