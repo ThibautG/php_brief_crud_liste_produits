@@ -28,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { // $_SERVER est appelée variable s
 
             // Stockage du message dans la session
             $_SESSION['message'] = "Vous avez modifié $name pour un prix de $price € à une quantité de $stock";
+            $_SESSION['Retour'];
         }catch(PDOException $e){
             echo 'error  est survenue '.$e->getMessage();
         }
@@ -72,10 +73,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { // $_SERVER est appelée variable s
         <button type="submit">Modifier</button>
     </div>
 </form>
+<div>
+    <button><a href="index.php">Retour</a></button>
+</div>
 <?php
 // Affichage du message stocké en session
 if (isset($_SESSION['message'])) {
     echo "<p>" . htmlspecialchars($_SESSION['message']) . "</p>";
+
     // suppression du message stocké en session
     unset($_SESSION['message']);
 }

@@ -40,7 +40,7 @@ try{
     // suppression du message stocké en session
     unset($_SESSION['message']);
 
-header("Location: index.php");
+    header("Location: index.php");
 
 ?>
 

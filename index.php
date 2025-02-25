@@ -35,6 +35,7 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>Liste produits</title>
 </head>
 <body>
+<h1>Liste des articles</h1>
 <?php if (!empty($produits)): ?>
     <table>
         <thead>
@@ -62,6 +63,11 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php endforeach; ?> <!-- là on ferme l'accolade du foreach en gros -->
         </tbody>
     </table>
+
+    <div>
+        <button><a href="add.php">Ajouter un article</a></button>
+    </div>
+
 <?php else: ?>
     <p>Aucun produit</p>
 <?php endif; ?>

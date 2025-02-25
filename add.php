@@ -69,6 +69,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { // $_SERVER est appelée variable s
         <button type="submit">Ajouter</button>
     </div>
 </form>
+<div>
+    <button><a href="index.php">Retour</a></button>
+</div>
 <?php
 // Affichage du message stocké en session
 if (isset($_SESSION['message'])) {
