@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { // $_SERVER est appelée variable s
 
 </head>
 <body>
-<h1> Ajouter un produit</h1>
+<h1>Ajouter un produit</h1>
 <form action="add.php" method="post">
     <div>
         <label for="nom">Nom : </label>
