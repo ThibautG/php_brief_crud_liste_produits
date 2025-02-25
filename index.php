@@ -56,8 +56,8 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <td><?=  htmlspecialchars($p['nom_produit'])  ?></td>
                 <td><?=  htmlspecialchars($p['prix_produit'] . ' €')  ?></td>
                 <td><?=  htmlspecialchars($p['stock_produit'])  ?></td>
-                <td><button><a href="edit.php?id="<?= $p['id_produit']; ?>>Modifier</a></button></td>
-                <td><button><a href="delete.php?id="<?= $p['id_produit']; ?>>Supprimer</a></button></td>
+                <td><button><a href="edit.php?id=<?= $p['id_produit']; ?>">Modifier</a></button></td>
+                <td><button><a href="delete.php?id=<?= $p['id_produit']; ?>">Supprimer</a></button></td>
             </tr>
         <?php endforeach; ?> <!-- là on ferme l'accolade du foreach en gros -->
         </tbody>
